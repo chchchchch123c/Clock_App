@@ -1,8 +1,8 @@
 import 'package:clock_app/constant/color.dart';
-import 'package:clock_app/screens/alarm.dart';
-import 'package:clock_app/screens/world_clock.dart';
-import 'package:clock_app/screens/stopwatch.dart';
-import 'package:clock_app/screens/timer.dart';
+import 'package:clock_app/screens/1_alarm.dart';
+import 'package:clock_app/screens/2_world_clock.dart';
+import 'package:clock_app/screens/3_stopwatch.dart';
+import 'package:clock_app/screens/4_timer.dart';
 import 'package:flutter/material.dart';
 
 class MainTab extends StatelessWidget {
