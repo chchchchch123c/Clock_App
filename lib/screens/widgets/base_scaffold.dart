@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 class BaseScaffold extends StatelessWidget {
   final Widget body;
   final PreferredSizeWidget? appBar;
+
   const BaseScaffold({
     super.key,
     required this.body,
