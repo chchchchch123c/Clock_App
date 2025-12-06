@@ -3,8 +3,10 @@ import 'package:clock_app/screens/main_tab.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MaterialApp(
     theme: ThemeData(
+      fontFamily: 'Inter',
       appBarTheme: AppBarTheme(
         iconTheme: IconThemeData(
           color: kBlack,
