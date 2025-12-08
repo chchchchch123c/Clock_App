@@ -1,4 +1,5 @@
 import 'package:clock_app/constant/color.dart';
+import 'package:clock_app/controllers/4_timer_controller.dart';
 import 'package:clock_app/screens/1_alarm.dart';
 import 'package:clock_app/screens/2_world_clock.dart';
 import 'package:clock_app/screens/3_stopwatch.dart';
@@ -19,7 +20,7 @@ class MainTab extends StatelessWidget {
               Alarm(),
               WorldClock(),
               Stopwatch(),
-              Timer(),
+              Timer(controller: TimerController(),),
             ],
           ),
           bottomNavigationBar: Container(
