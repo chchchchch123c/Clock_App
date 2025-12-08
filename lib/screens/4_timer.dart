@@ -25,7 +25,7 @@ class Timer extends StatelessWidget {
             top: 24,
             child: SizedBox(
               width: width,
-              height: width,
+              height: width * 0.8,
               child: Stack(
                 alignment: Alignment.center,
                 children: [
@@ -33,9 +33,23 @@ class Timer extends StatelessWidget {
                     top: 16,
                     child: TimeUnitLabelRow(),
                   ),
-                  TimeWheelPicker(
-                    selectedIndexNotifier: controller.selectedIndex,
-                    controller: controller.wheelController,
+                  Row(
+                    // TODO 컴포넌트로 따로 분리하고 시간/분/초에 맞춰서 따로 만들기
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      TimeWheelPicker(
+                        selectedIndexNotifier: controller.selectedIndex,
+                        controller: controller.wheelController,
+                      ),
+                      TimeWheelPicker(
+                        selectedIndexNotifier: controller.selectedIndex,
+                        controller: controller.wheelController,
+                      ),
+                      TimeWheelPicker(
+                        selectedIndexNotifier: controller.selectedIndex,
+                        controller: controller.wheelController,
+                      ),
+                    ],
                   ),
                 ],
               ),
