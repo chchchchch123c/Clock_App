@@ -7,12 +7,18 @@ class TimeUnitLabel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      label,
-      style: TextStyle(
-        fontSize: 14,
-        fontWeight: FontWeight.w500,
-        color: kGray,
+    return SizedBox(
+      width: 32,
+      height: 22,
+      child: Center(
+        child: Text(
+          label,
+          style: TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.w500,
+            color: kGray,
+          ),
+        ),
       ),
     );
   }
