@@ -9,23 +9,28 @@ class TimerStartButton extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           gradient: kPointGradient,
-          borderRadius: BorderRadius.all(Radius.circular(64))
+          borderRadius: BorderRadius.all(Radius.circular(56))
       ),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.transparent,
           shadowColor: Colors.transparent,
-          fixedSize: Size(136, 56),
         ),
         onPressed: () {
           // TODO
         },
-        child: Text(
-          '시작',
-          style: TextStyle(
-            color: kWhite,
-            fontSize: 18,
-            fontWeight: FontWeight.w500,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 28,
+            vertical: 12,
+          ),
+          child: Text(
+            '시작',
+            style: TextStyle(
+              color: kWhite,
+              fontSize: 18,
+              fontWeight: FontWeight.w500,
+            ),
           ),
         ),
       ),
