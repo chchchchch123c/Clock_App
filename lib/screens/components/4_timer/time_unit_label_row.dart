@@ -11,11 +11,14 @@ class TimeUnitLabelRow extends StatelessWidget {
       width: ScreenSize.width(context),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
+          Spacer(flex: 3,),
           TimeUnitLabel(label: '시간'),
+          Spacer(flex: 4,),
           TimeUnitLabel(label: '분'),
+          Spacer(flex: 4,),
           TimeUnitLabel(label: '초'),
+          Spacer(flex: 3,),
         ],
       ),
     );
