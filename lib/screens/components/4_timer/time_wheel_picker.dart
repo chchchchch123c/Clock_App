@@ -18,13 +18,14 @@ class TimeWheelPicker extends StatelessWidget {
     return ConstrainedBox(
       constraints: const BoxConstraints(
         maxHeight: 69 * 3,
+        maxWidth: 72,
       ),
       child: ValueListenableBuilder<int>(
         valueListenable: selectedIndexNotifier,
-        builder: (context, selectedIndex, _) {
-          return ListWheelScrollView.useDelegate(
+        builder: (context, selectedIndex, _) => ListWheelScrollView.useDelegate(
+            physics: const FixedExtentScrollPhysics(),
             controller: controller,
-            itemExtent: 69,
+            itemExtent: 72,
             onSelectedItemChanged: (index) {
               selectedIndexNotifier.value = index;
             },
@@ -44,8 +45,7 @@ class TimeWheelPicker extends StatelessWidget {
                 );
               }),
             ),
-          );
-        },
+          ),
       ),
     );
   }
