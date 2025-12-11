@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ScreenSize {
+class SizeUtil {
 
   static double width(context) => MediaQuery.sizeOf(context).width;
 
