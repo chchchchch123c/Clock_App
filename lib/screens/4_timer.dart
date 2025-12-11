@@ -1,19 +1,20 @@
 import 'package:clock_app/controllers/4_timer_controller.dart';
-import 'package:clock_app/screens/components/4_timer/time_wheel_picker.dart';
-import 'package:clock_app/screens/components/4_timer/time_unit_label_row.dart';
-import 'package:clock_app/screens/components/4_timer/timer_start_button.dart';
+import 'package:clock_app/screens/components/4_timer/buttons/timer_start_button.dart';
+import 'package:clock_app/screens/components/4_timer/labels/time_unit_label_row.dart';
+import 'package:clock_app/screens/components/4_timer/wheels/time_wheel_picker_row.dart';
 import 'package:clock_app/screens/widgets/base_app_bar.dart';
 import 'package:clock_app/screens/widgets/base_scaffold.dart';
-import 'package:clock_app/utils/screen_size.dart';
+import 'package:clock_app/utils/size_util.dart';
 import 'package:flutter/material.dart';
 
 class Timer extends StatelessWidget {
   final TimerController controller;
+
   const Timer({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
-    final width = ScreenSize.width(context);
+    final width = SizeUtil.width(context);
     return BaseScaffold(
       appBar: BaseAppBar(
         onTap: () {},
@@ -33,23 +34,8 @@ class Timer extends StatelessWidget {
                     top: 16,
                     child: TimeUnitLabelRow(),
                   ),
-                  Row(
-                    // TODO 컴포넌트로 따로 분리하고 시간/분/초에 맞춰서 따로 만들기
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      TimeWheelPicker(
-                        selectedIndexNotifier: controller.selectedIndex,
-                        controller: controller.wheelController,
-                      ),
-                      TimeWheelPicker(
-                        selectedIndexNotifier: controller.selectedIndex,
-                        controller: controller.wheelController,
-                      ),
-                      TimeWheelPicker(
-                        selectedIndexNotifier: controller.selectedIndex,
-                        controller: controller.wheelController,
-                      ),
-                    ],
+                  TimeWheelPickerRow(
+                    controller: controller,
                   ),
                 ],
               ),
@@ -57,7 +43,9 @@ class Timer extends StatelessWidget {
           ),
           Positioned(
             bottom: 64,
-            child: TimerStartButton(),
+            child: TimerStartButton(
+              controller: controller,
+            ),
           ),
         ],
       ),
