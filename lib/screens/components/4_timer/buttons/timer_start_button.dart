@@ -1,4 +1,4 @@
-import 'package:clock_app/constant/color.dart';
+import 'package:clock_app/theme/design_system.dart';
 import 'package:flutter/material.dart';
 
 class TimerStartButton extends StatelessWidget {
@@ -8,7 +8,7 @@ class TimerStartButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          gradient: kPointGradient,
+          gradient: DesignSystem.color.kPointGradient,
           borderRadius: BorderRadius.all(Radius.circular(56))
       ),
       child: ElevatedButton(
@@ -27,9 +27,9 @@ class TimerStartButton extends StatelessWidget {
           child: Text(
             '시작',
             style: TextStyle(
-              color: kWhite,
+              color: DesignSystem.color.kWhite,
               fontSize: 18,
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.w600,
             ),
           ),
         ),
