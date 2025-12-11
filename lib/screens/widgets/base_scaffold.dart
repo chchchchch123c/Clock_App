@@ -1,4 +1,4 @@
-import 'package:clock_app/constant/color.dart';
+import 'package:clock_app/theme/design_system.dart';
 import 'package:flutter/material.dart';
 
 class BaseScaffold extends StatelessWidget {
@@ -16,7 +16,7 @@ class BaseScaffold extends StatelessWidget {
     final mediaWidth = MediaQuery.sizeOf(context).width;
     return Scaffold(
       appBar: appBar,
-      backgroundColor: kBackgroundColor,
+      backgroundColor: DesignSystem.color.kBackgroundColor,
       body: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 16,
