@@ -1,4 +1,4 @@
-import 'package:clock_app/constant/color.dart';
+import 'package:clock_app/theme/design_system.dart';
 import 'package:flutter/material.dart';
 
 class BaseAppBar extends StatelessWidget implements PreferredSizeWidget{
@@ -10,7 +10,7 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget{
     return AppBar(
       scrolledUnderElevation: 0,
       toolbarHeight: 88,
-      backgroundColor: kBackgroundColor,
+      backgroundColor: DesignSystem.color.kBackgroundColor,
       actionsPadding: EdgeInsets.symmetric(
         horizontal: 24,
       ),
