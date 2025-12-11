@@ -1,5 +1,5 @@
-import 'package:clock_app/screens/components/4_timer/time_unit_label.dart';
-import 'package:clock_app/utils/screen_size.dart';
+import 'package:clock_app/screens/components/4_timer/labels/time_unit_label.dart';
+import 'package:clock_app/utils/size_util.dart';
 import 'package:flutter/material.dart';
 
 class TimeUnitLabelRow extends StatelessWidget {
@@ -8,7 +8,7 @@ class TimeUnitLabelRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: ScreenSize.width(context),
+      width: SizeUtil.width(context),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
