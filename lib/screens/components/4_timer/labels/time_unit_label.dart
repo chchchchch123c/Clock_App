@@ -1,4 +1,4 @@
-import 'package:clock_app/constant/color.dart';
+import 'package:clock_app/theme/design_system.dart';
 import 'package:flutter/material.dart';
 
 class TimeUnitLabel extends StatelessWidget {
@@ -16,7 +16,7 @@ class TimeUnitLabel extends StatelessWidget {
           style: TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.w500,
-            color: kGray,
+            color: DesignSystem.color.kGray,
           ),
         ),
       ),
