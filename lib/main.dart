@@ -1,21 +1,11 @@
-import 'package:clock_app/constant/color.dart';
 import 'package:clock_app/screens/main_tab.dart';
+import 'package:clock_app/theme/design_system.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MaterialApp(
-    theme: ThemeData(
-      fontFamily: 'Inter',
-      appBarTheme: AppBarTheme(
-        iconTheme: IconThemeData(
-          color: kBlack,
-        )
-      ),
-      iconTheme: IconThemeData(
-        color: kBlack,
-      )
-    ),
+    theme: DesignSystem.theme.themeData,
     home: MainTab(),
   ));
 }
