@@ -1,4 +1,4 @@
-import 'package:clock_app/constant/color.dart';
+import 'package:clock_app/theme/design_system.dart';
 import 'package:clock_app/controllers/4_timer_controller.dart';
 import 'package:clock_app/screens/1_alarm.dart';
 import 'package:clock_app/screens/2_world_clock.dart';
@@ -24,15 +24,15 @@ class MainTab extends StatelessWidget {
             ],
           ),
           bottomNavigationBar: Container(
-            color: kBackgroundColor,
+            color: DesignSystem.color.kBackgroundColor,
             height: 56,
             child: TabBar(
               labelPadding: EdgeInsets.symmetric(
                 vertical: 18,
               ),
-              indicatorColor: kBlack,
-              labelColor: kBlack,
-              unselectedLabelColor: kGray,
+              indicatorColor: DesignSystem.color.kBlack,
+              labelColor: DesignSystem.color.kBlack,
+              unselectedLabelColor: DesignSystem.color.kGray,
               tabs: [
                 Text('알람'),
                 Text('세계시각'),
