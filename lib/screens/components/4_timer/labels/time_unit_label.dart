@@ -14,7 +14,7 @@ class TimeUnitLabel extends StatelessWidget {
         child: Text(
           label,
           style: TextStyle(
-            fontSize: 14,
+            fontSize: DesignSystem.fontSize.bodyMedium,
             fontWeight: FontWeight.w500,
             color: DesignSystem.color.kGray,
           ),
