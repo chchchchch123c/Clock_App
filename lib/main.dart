@@ -11,7 +11,17 @@ void main() async {
   ]);
   runApp(
     MaterialApp(
-      theme: DesignSystem.theme.themeData,
+      theme: ThemeData(
+        fontFamily: DesignSystem.fontFamily.inter,
+        appBarTheme: AppBarTheme(
+          iconTheme: IconThemeData(
+            color: DesignSystem.color.kBlack,
+          ),
+        ),
+        iconTheme: IconThemeData(
+          color: DesignSystem.color.kBlack,
+        ),
+      ),
       home: MainTab(),
     ),
   );
