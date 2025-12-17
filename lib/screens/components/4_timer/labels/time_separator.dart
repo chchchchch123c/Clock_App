@@ -10,7 +10,7 @@ class TimeSeparator extends StatelessWidget {
       child: Text(
         ':',
         style: TextStyle(
-          fontSize: DesignSystem.fontSize.large,
+          fontSize: DesignSystem.fontSize.displayMedium,
           color: DesignSystem.color.kBlack,
         ),
       ),
