@@ -7,6 +7,8 @@ class AppColor {
   final kBlack = const Color(0xFF121212);
   final kGray = const Color(0xFF9A999E);
   final kWhite = const Color(0xFFFCFBFF);
+  final kDial = const Color(0xFFE2E1E6);
+  final kRed = const Color(0xFFDC2217);
 
   final kOrange = const Color(0xFFE3465B);
   final kPurple = const Color(0xFFC017E4);
