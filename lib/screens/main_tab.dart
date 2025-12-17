@@ -25,10 +25,14 @@ class MainTab extends StatelessWidget {
           ),
           bottomNavigationBar: Container(
             color: DesignSystem.color.kBackgroundColor,
-            height: 56,
+            height: 64,
             child: TabBar(
               labelPadding: EdgeInsets.symmetric(
                 vertical: 18,
+              ),
+              labelStyle: TextStyle(
+                fontSize: DesignSystem.fontSize.labelLarge,
+                fontWeight: FontWeight.w600,
               ),
               indicatorColor: DesignSystem.color.kBlack,
               labelColor: DesignSystem.color.kBlack,
