@@ -1,8 +1,8 @@
 import 'package:clock_app/theme/design_system.dart';
 import 'package:flutter/material.dart';
 
-class TimeSeparator extends StatelessWidget {
-  const TimeSeparator({super.key});
+class TimeSeparatorLabel extends StatelessWidget {
+  const TimeSeparatorLabel({super.key});
 
   @override
   Widget build(BuildContext context) {
