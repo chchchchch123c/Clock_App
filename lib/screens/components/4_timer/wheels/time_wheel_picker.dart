@@ -3,16 +3,15 @@ import 'package:flutter/material.dart';
 
 class TimeWheelPicker extends StatelessWidget {
   final ValueNotifier<int> selectedIndexNotifier;
-  final FixedExtentScrollController controller;
-  final int itemCount;
   final ValueNotifier<bool> isDraggingNotifier;
+
+  final int itemCount;
 
   const TimeWheelPicker({
     super.key,
     required this.selectedIndexNotifier,
     required this.isDraggingNotifier,
-    required this.controller,
-    this.itemCount = 100,
+    required this.itemCount,
   });
 
   @override
@@ -39,7 +38,6 @@ class TimeWheelPicker extends StatelessWidget {
               builder: (context, isDragging, _) {
                 return ListWheelScrollView.useDelegate(
                   physics: const FixedExtentScrollPhysics(),
-                  controller: controller,
                   itemExtent: 72,
                   onSelectedItemChanged: (index) {
                     selectedIndexNotifier.value = index;
@@ -51,7 +49,7 @@ class TimeWheelPicker extends StatelessWidget {
                         duration: Duration(milliseconds: 200),
                         style: TextStyle(
                           fontFamily: DesignSystem.fontFamily.inter,
-                          fontSize: DesignSystem.fontSize.large,
+                          fontSize: DesignSystem.fontSize.displayMedium,
                           color: isSelected ?
                           (isDragging ? DesignSystem.color.kDeepPurple : DesignSystem.color.kBlack) :
                           (isDragging ? DesignSystem.color.kDeepPurple.withAlpha(100) : DesignSystem.color.kGray),
@@ -61,7 +59,6 @@ class TimeWheelPicker extends StatelessWidget {
                         child: Center(
                           child: Text(
                             index.toString().padLeft(2, '0'),
-
                           ),
                         ),
                       );
