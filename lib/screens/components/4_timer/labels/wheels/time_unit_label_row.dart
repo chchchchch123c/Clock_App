@@ -1,4 +1,4 @@
-import 'package:clock_app/screens/components/4_timer/labels/time_unit_label.dart';
+import 'package:clock_app/screens/components/4_timer/labels/wheels/time_unit_label.dart';
 import 'package:clock_app/utils/size_util.dart';
 import 'package:flutter/material.dart';
 
