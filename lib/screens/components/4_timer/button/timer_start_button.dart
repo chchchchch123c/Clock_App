@@ -1,8 +1,10 @@
+import 'package:clock_app/controllers/4_timer_controller.dart';
 import 'package:clock_app/theme/design_system.dart';
 import 'package:flutter/material.dart';
 
 class TimerStartButton extends StatelessWidget {
-  const TimerStartButton({super.key});
+  final TimerController controller;
+  const TimerStartButton({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,7 @@ class TimerStartButton extends StatelessWidget {
           shadowColor: Colors.transparent,
         ),
         onPressed: () {
-          // TODO
+          controller.startTimer();
         },
         child: Padding(
           padding: const EdgeInsets.symmetric(
@@ -25,10 +27,10 @@ class TimerStartButton extends StatelessWidget {
             vertical: 12,
           ),
           child: Text(
-            '시작',
+            '시작', //  TODO => '중지'로 바뀌어야 함
             style: TextStyle(
               color: DesignSystem.color.kWhite,
-              fontSize: 18,
+              fontSize: DesignSystem.fontSize.labelLarge,
               fontWeight: FontWeight.w600,
             ),
           ),
