@@ -32,7 +32,7 @@ class MainTab extends StatelessWidget {
               ),
               labelStyle: TextStyle(
                 fontSize: DesignSystem.fontSize.labelLarge,
-                fontWeight: FontWeight.w600,
+                fontWeight: FontWeight.w500,
               ),
               indicatorColor: DesignSystem.color.kBlack,
               labelColor: DesignSystem.color.kBlack,
