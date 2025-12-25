@@ -9,4 +9,3 @@ class DesignSystem {
   static const fontFamily = FontFamily();
 
 }
-
